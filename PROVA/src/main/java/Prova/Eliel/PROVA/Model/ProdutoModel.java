@@ -11,13 +11,14 @@ import java.util.List;
 public class ProdutoModel {
 
     @Id
-    @GeneratedValue( strategy = GenerationType.IDENTITY )
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Long id;
     private String nome;
     private Double preco;
+    private ProdutoStatusEnum statusEnum;
 
-    public ProdutoModel(){
+    public ProdutoModel() {
     }
 
     public Long getId() {
@@ -36,8 +37,21 @@ public class ProdutoModel {
         this.nome = nome;
     }
 
+    public Double getPreco() {
+        return preco;
+    }
 
+    public void setPreco(Double preco) {
+        this.preco = preco;
+    }
+
+    public ProdutoStatusEnum getStatusEnum() {
+        return statusEnum;
+    }
+
+    public void setStatusEnum(ProdutoStatusEnum statusEnum) {
+        this.statusEnum = statusEnum;
+    }
 }
-
 
 
